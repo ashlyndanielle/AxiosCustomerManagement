@@ -4,7 +4,7 @@ import './App.css';
 import Header from './Header/Header';
 import List from './List/List';
 import Workspace from './Workspace/Workspace';
-import { getCustomerList, postCustomer } from '../customers';
+import { getCustomerList, postCustomer, getCustomer, updateCustomer } from '../customers';
 
 class App extends Component {
   constructor() {
@@ -44,6 +44,22 @@ class App extends Component {
     })
   }
 
+  selectCustomer = customer => {
+    getCustomer(customer).then( response => {
+      console.log(response);
+      this.setState({
+        initialLoad: false,
+        currentCustomer: response
+      })
+    }).catch( () => console.log('select customer failed'))
+  }
+
+  saveEdit = (id, propertyObject) => {
+    updateCustomer(id, propertyObject).then( response => {
+      console.log(response);
+    }).catch( () => console.log('failed to update customer'))
+  }
+
   render() {
     return (
       <div>
@@ -54,6 +70,7 @@ class App extends Component {
             <List
               customerList={this.state.customerList}
               startNewCustomer={this.startNewCustomer}
+              selectCustomer={this.selectCustomer}
               />
             : null
           }

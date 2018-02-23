@@ -30,29 +30,11 @@
     {
       "first": "Gus",
       "last": "Nordstrom",
-      "email": "stuff@stuff.com",
-      "phone": "8018792552",
+      "email": "gus@gus.com",
+      "phone": "8019998877",
       "status": "New Customer",
       "log": "",
       "id": 4
-    },
-    {
-      "first": "Please",
-      "last": "Explain",
-      "email": "why@this.doesnot.com",
-      "phone": "8017887878",
-      "status": "New Customer",
-      "log": "",
-      "id": 5
-    },
-    {
-      "first": "people",
-      "last": "happy",
-      "email": "stuff",
-      "phone": "8015556666",
-      "status": "New Customer",
-      "log": "",
-      "id": 6
     }
   ]
 }
