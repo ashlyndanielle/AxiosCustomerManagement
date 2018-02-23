@@ -2,12 +2,13 @@
   "customers": [
     {
       "id": 1,
-      "first": "Bob",
+      "first": "Bobby",
       "last": "Joe",
       "status": "2015 macbook pro in for repair",
       "email": "bobjoe@gmail.com",
       "phone": "(386)-543-2353",
-      "log": "This\nis\na\ntest\nlog"
+      "log": "This\nis\na\ntest\nlog",
+      "property": "Bobby"
     },
     {
       "id": 2,
@@ -19,22 +20,13 @@
       "log": "This\nis\nanother\ntest\nlog"
     },
     {
-      "first": "Ashlyn",
-      "last": "Mitros",
-      "email": "ashlyn@gmail.com",
-      "phone": "8018792866",
+      "first": "Gus",
+      "last": "Nordstrom",
+      "email": "gusgus@nordstrom.com",
+      "phone": "4564564564",
       "status": "New Customer",
       "log": "",
       "id": 3
-    },
-    {
-      "first": "Gus",
-      "last": "Nordstrom",
-      "email": "gus@gus.com",
-      "phone": "8019998877",
-      "status": "New Customer",
-      "log": "",
-      "id": 4
     }
   ]
 }

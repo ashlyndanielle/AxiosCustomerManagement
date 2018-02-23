@@ -4,7 +4,7 @@ import './App.css';
 import Header from './Header/Header';
 import List from './List/List';
 import Workspace from './Workspace/Workspace';
-import { getCustomerList, postCustomer, getCustomer, updateCustomer } from '../customers';
+import { getCustomerList, postCustomer, getCustomer, updateCustomer, deleteCustomer } from '../customers';
 
 class App extends Component {
   constructor() {
@@ -46,7 +46,6 @@ class App extends Component {
 
   selectCustomer = customer => {
     getCustomer(customer).then( response => {
-      console.log(response);
       this.setState({
         initialLoad: false,
         currentCustomer: response
@@ -55,9 +54,27 @@ class App extends Component {
   }
 
   saveEdit = (id, propertyObject) => {
-    updateCustomer(id, propertyObject).then( response => {
-      console.log(response);
+    updateCustomer(id, propertyObject).then( customer => {
+      console.log('saveEdit response', customer);
+      getCustomerList().then( list => {
+        this.setState({
+          customerList: list,
+          currentCustomer: customer
+        })
+      })
     }).catch( () => console.log('failed to update customer'))
+  }
+
+  removeCustomer = id => {
+    deleteCustomer(id).then( () => {
+      getCustomerList().then( list => {
+        this.setState({
+          customerList: list,
+          initialLoad: true,
+          creating: false
+        })
+      })
+    }).catch( () => console.log('failed to delete'));
   }
 
   render() {
@@ -78,6 +95,8 @@ class App extends Component {
                     currentCustomer={this.state.currentCustomer}
                     creating={this.state.creating}
                     createCustomer={this.createCustomer}
+                    saveEdit={this.saveEdit}
+                    removeCustomer={this.removeCustomer}
                   />
         </div>
       </div>
