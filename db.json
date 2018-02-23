@@ -17,6 +17,42 @@
       "email": "sarahcroft@gmail.com",
       "phone": "(325)-345-2352",
       "log": "This\nis\nanother\ntest\nlog"
+    },
+    {
+      "first": "Ashlyn",
+      "last": "Mitros",
+      "email": "ashlyn@gmail.com",
+      "phone": "8018792866",
+      "status": "New Customer",
+      "log": "",
+      "id": 3
+    },
+    {
+      "first": "Gus",
+      "last": "Nordstrom",
+      "email": "stuff@stuff.com",
+      "phone": "8018792552",
+      "status": "New Customer",
+      "log": "",
+      "id": 4
+    },
+    {
+      "first": "Please",
+      "last": "Explain",
+      "email": "why@this.doesnot.com",
+      "phone": "8017887878",
+      "status": "New Customer",
+      "log": "",
+      "id": 5
+    },
+    {
+      "first": "people",
+      "last": "happy",
+      "email": "stuff",
+      "phone": "8015556666",
+      "status": "New Customer",
+      "log": "",
+      "id": 6
     }
   ]
 }

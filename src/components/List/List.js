@@ -8,10 +8,7 @@ import CreateCustomer from './CreateCustomer/CreateCustomer';
 class List extends Component {
 
   render() {
-    const {
-      customerList
-    } = this.props;
-
+    const { customerList, startNewCustomer } = this.props;
     const CustomerComponents = customerList.map( customer => (
       <Customer
         key={ customer.id }
@@ -26,7 +23,8 @@ class List extends Component {
         {
             <div id="List__namesContainer">
               { CustomerComponents }
-              <CreateCustomer />
+              <CreateCustomer
+                startNewCustomer={startNewCustomer} />
             </div>
         }
       </div>
