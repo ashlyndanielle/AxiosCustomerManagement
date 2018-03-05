@@ -1,6 +1,8 @@
 import axios from 'axios';
 import apiURL from './api';
 
+const udot = 'https://opendata.arcgis.com/datasets/c2c6fe2c52b141b6afb4374d5825c611_0.geojson';
+
 export function getCustomerList() {
   return axios.get(apiURL).then( response => response.data );
 }
@@ -19,4 +21,8 @@ export function updateCustomer (id, propertyObject) {
 
 export function deleteCustomer (id) {
   return axios.delete(apiURL+id).then( response => response );
+}
+
+export function getTraffic() {
+  return axios.get(udot).then( response => response.data )
 }

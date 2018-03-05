@@ -4,7 +4,7 @@ import './App.css';
 import Header from './Header/Header';
 import List from './List/List';
 import Workspace from './Workspace/Workspace';
-import { getCustomerList, postCustomer, getCustomer, updateCustomer, deleteCustomer } from '../customers';
+import { getCustomerList, postCustomer, getCustomer, updateCustomer, deleteCustomer, getTraffic } from '../customers';
 
 class App extends Component {
   constructor() {
@@ -23,6 +23,9 @@ class App extends Component {
       this.setState({
         customerList
       })
+    })
+    getTraffic().then( traffic => {
+      console.log('TRAFFIC: ', traffic.features[0])
     })
   }
 
